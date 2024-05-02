@@ -12,7 +12,6 @@ def login(username, password):
     user = collection.find_one({'username': username, 'password': password})
     if user:
         st.success("Login successful.")
-        st.balloons()
         # Open the welcome.py file located in the predictor folder in a new Streamlit app
         subprocess.Popen(["streamlit", "run", "predictor/Dashboard.py"])
     else:
